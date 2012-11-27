@@ -1,0 +1,42 @@
+c:\users\natali moshe\documents\visual studio 2012\Projects\MvcApplication1\MvcApplication1\bin\MvcApplication1.dll
+c:\users\natali moshe\documents\visual studio 2012\Projects\MvcApplication1\MvcApplication1\bin\MvcApplication1.pdb
+c:\users\natali moshe\documents\visual studio 2012\Projects\MvcApplication1\MvcApplication1\bin\EntityFramework.dll
+c:\users\natali moshe\documents\visual studio 2012\Projects\MvcApplication1\MvcApplication1\bin\Microsoft.Web.Infrastructure.dll
+c:\users\natali moshe\documents\visual studio 2012\Projects\MvcApplication1\MvcApplication1\bin\System.Web.Helpers.dll
+c:\users\natali moshe\documents\visual studio 2012\Projects\MvcApplication1\MvcApplication1\bin\System.Web.Mvc.dll
+c:\users\natali moshe\documents\visual studio 2012\Projects\MvcApplication1\MvcApplication1\bin\System.Web.Providers.dll
+c:\users\natali moshe\documents\visual studio 2012\Projects\MvcApplication1\MvcApplication1\bin\System.Web.Razor.dll
+c:\users\natali moshe\documents\visual studio 2012\Projects\MvcApplication1\MvcApplication1\bin\System.Web.WebPages.Deployment.dll
+c:\users\natali moshe\documents\visual studio 2012\Projects\MvcApplication1\MvcApplication1\bin\System.Web.WebPages.dll
+c:\users\natali moshe\documents\visual studio 2012\Projects\MvcApplication1\MvcApplication1\bin\System.Web.WebPages.Razor.dll
+c:\users\natali moshe\documents\visual studio 2012\Projects\MvcApplication1\MvcApplication1\bin\EntityFramework.xml
+c:\users\natali moshe\documents\visual studio 2012\Projects\MvcApplication1\MvcApplication1\bin\System.Web.Helpers.xml
+c:\users\natali moshe\documents\visual studio 2012\Projects\MvcApplication1\MvcApplication1\bin\System.Web.Mvc.xml
+c:\users\natali moshe\documents\visual studio 2012\Projects\MvcApplication1\MvcApplication1\bin\System.Web.Razor.xml
+c:\users\natali moshe\documents\visual studio 2012\Projects\MvcApplication1\MvcApplication1\bin\System.Web.WebPages.xml
+c:\users\natali moshe\documents\visual studio 2012\Projects\MvcApplication1\MvcApplication1\bin\System.Web.WebPages.Deployment.xml
+c:\users\natali moshe\documents\visual studio 2012\Projects\MvcApplication1\MvcApplication1\bin\System.Web.WebPages.Razor.xml
+c:\users\natali moshe\documents\visual studio 2012\Projects\MvcApplication1\MvcApplication1\obj\Debug\MvcApplication1.dll
+c:\users\natali moshe\documents\visual studio 2012\Projects\MvcApplication1\MvcApplication1\obj\Debug\MvcApplication1.pdb
+c:\users\natali moshe\documents\visual studio 2012\Projects\MvcApplication1\MvcApplication1\obj\Debug\SLT.csprojResolveAssemblyReference.cache
+C:\Users\natali moshe\Documents\GitHub\SLT\Project\MvcApplication1\MvcApplication1\bin\MvcApplication1.dll
+C:\Users\natali moshe\Documents\GitHub\SLT\Project\MvcApplication1\MvcApplication1\bin\MvcApplication1.pdb
+C:\Users\natali moshe\Documents\GitHub\SLT\Project\MvcApplication1\MvcApplication1\bin\EntityFramework.dll
+C:\Users\natali moshe\Documents\GitHub\SLT\Project\MvcApplication1\MvcApplication1\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\natali moshe\Documents\GitHub\SLT\Project\MvcApplication1\MvcApplication1\bin\System.Web.Helpers.dll
+C:\Users\natali moshe\Documents\GitHub\SLT\Project\MvcApplication1\MvcApplication1\bin\System.Web.Mvc.dll
+C:\Users\natali moshe\Documents\GitHub\SLT\Project\MvcApplication1\MvcApplication1\bin\System.Web.Providers.dll
+C:\Users\natali moshe\Documents\GitHub\SLT\Project\MvcApplication1\MvcApplication1\bin\System.Web.Razor.dll
+C:\Users\natali moshe\Documents\GitHub\SLT\Project\MvcApplication1\MvcApplication1\bin\System.Web.WebPages.Deployment.dll
+C:\Users\natali moshe\Documents\GitHub\SLT\Project\MvcApplication1\MvcApplication1\bin\System.Web.WebPages.dll
+C:\Users\natali moshe\Documents\GitHub\SLT\Project\MvcApplication1\MvcApplication1\bin\System.Web.WebPages.Razor.dll
+C:\Users\natali moshe\Documents\GitHub\SLT\Project\MvcApplication1\MvcApplication1\bin\EntityFramework.xml
+C:\Users\natali moshe\Documents\GitHub\SLT\Project\MvcApplication1\MvcApplication1\bin\System.Web.Helpers.xml
+C:\Users\natali moshe\Documents\GitHub\SLT\Project\MvcApplication1\MvcApplication1\bin\System.Web.Mvc.xml
+C:\Users\natali moshe\Documents\GitHub\SLT\Project\MvcApplication1\MvcApplication1\bin\System.Web.Razor.xml
+C:\Users\natali moshe\Documents\GitHub\SLT\Project\MvcApplication1\MvcApplication1\bin\System.Web.WebPages.xml
+C:\Users\natali moshe\Documents\GitHub\SLT\Project\MvcApplication1\MvcApplication1\bin\System.Web.WebPages.Deployment.xml
+C:\Users\natali moshe\Documents\GitHub\SLT\Project\MvcApplication1\MvcApplication1\bin\System.Web.WebPages.Razor.xml
+C:\Users\natali moshe\Documents\GitHub\SLT\Project\MvcApplication1\MvcApplication1\obj\Debug\SLT.csprojResolveAssemblyReference.cache
+C:\Users\natali moshe\Documents\GitHub\SLT\Project\MvcApplication1\MvcApplication1\obj\Debug\MvcApplication1.dll
+C:\Users\natali moshe\Documents\GitHub\SLT\Project\MvcApplication1\MvcApplication1\obj\Debug\MvcApplication1.pdb
