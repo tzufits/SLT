@@ -80,10 +80,11 @@ namespace MvcApplication4.Controllers
 
         public Boolean isExists(LogOnModel model)
         {
-            if (!System.IO.File.Exists(@"C:\Users\oener\Documents\users.txt"))
-                return false;
+            //if (!System.IO.File.Exists(@"C:\Users\oener\Documents\users.txt"))
+            //    return false;
+            string filePath = Server.MapPath(Url.Content("~/Content/users.txt"));
 
-            string[] lines = System.IO.File.ReadAllLines(@"C:\Users\oener\Documents\users.txt");
+            string[] lines = System.IO.File.ReadAllLines(filePath);
 
             for (int i = 0; i < lines.Length; i++)
                 if (lines[i] == model.UserName && lines[i + 1] == model.Password)
