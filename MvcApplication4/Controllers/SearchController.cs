@@ -12,54 +12,45 @@ namespace MvcApplication4.Controllers
 {
     public class SearchController : Controller
     {
-        public ActionResult LogOn()
+        public ActionResult Search()
         {
             return View();
         }
 
         [HttpPost]
 
-        public ActionResult LogOn(SearchModel model, string returnUrl)
+        public ActionResult Search(SearchModel model, string returnUrl)
         {
-            if (ModelState.IsValid)
-            {
-                if(model.Day == "sun")
+           // if (ModelState.IsValid)
+           // {
+                if(isExists(model))
                 {
-                    FormsAuthentication.SetAuthCookie(model.Day, model.Sex);
-                    if (Url.IsLocalUrl(returnUrl) && returnUrl.Length > 1 && returnUrl.StartsWith("/")
-                        && !returnUrl.StartsWith("//") && !returnUrl.StartsWith("/\\"))
-                    {
-                        return Redirect(returnUrl);
-                    }
-                    else
-                    {
-                        return RedirectToAction("Index", "Home");
-                    }
+                    return RedirectToAction("SearchView", "Account");
                 }
                 else
                 {
-                    ModelState.AddModelError("","");
+                    return RedirectToAction("About", "Home");
                 }
-            }
+           // }
 
             // If we got this far, something failed, redisplay form
-            return View(model);
+           // return View(model);
         }
 
-        public Boolean isExists(LogOnModel model)
+        public Boolean isExists(SearchModel model)
         {
-            if (!System.IO.File.Exists(@"C:\Users\oener\Documents\trans.txt"))
-                return false;
+            //if (!System.IO.File.Exists(@"C:\Users\oener\Documents\users.txt"))
+            //    return false;
+            string filePath = Server.MapPath(Url.Content("~/Content/trans.txt"));
 
-            string[] lines = System.IO.File.ReadAllLines(@"C:\Users\oener\Documents\trans.txt");
+            string[] lines = System.IO.File.ReadAllLines(filePath);
 
             for (int i = 0; i < lines.Length; i++)
-                if (lines[i] == model.UserName && lines[i + 1] == model.Password)
+                if (lines[i] == model.Day && lines[i + 1] == model.City && lines[i+2] == model.Sex)
                     return true;
                 else
-                    i++;
+                    i += 2;
             return false;
-
         }
 
     }

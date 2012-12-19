@@ -9,16 +9,21 @@ namespace MvcApplication4.Models
 {
     public class SearchModel
     {
-        [Required]
-        [Display(Name = "יום")]
+
+        [Display(Name = "יום  ")]
         public string Day { get; set; }
 
-        [Required]
-        [DataType(DataType.Password)]
-        [Display(Name = "עיר")]
+
+        [Display(Name = "עיר  ")]
         public string City { get; set; }
 
-        [Display(Name = "מין")]
-        public bool Sex { get; set; }
+        [Display(Name = "מין  ")]
+        public string Sex { get; set; }
+
+        [Display(Name = "זכר ")]
+        public bool Mail { get; set; }
+
+        [Display(Name = "נקבה ")]
+        public bool Femail { get; set; }
     }
 }
