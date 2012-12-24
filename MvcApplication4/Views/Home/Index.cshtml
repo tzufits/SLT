@@ -4,42 +4,6 @@
 }
 
 <h2>@ViewBag.Message</h2>
-
-@if(Request.IsAuthenticated)
-{
-    <h2>חיפוש מתורגמן</h2>
 <p>
-    הכנס ערכים לחיפוש
-</p>
-    <div>
-        <fieldset>
-            <legend>SLT</legend>
-            <div class="editor-label">
-                @Html.TextBoxFor(m => m.Day)
-                @Html.LabelFor(m => m.Day)
-            </div>
-
-            <div class="editor-label">
-                @Html.TextBoxFor(m => m.City)
-                @Html.LabelFor(m => m.City)
-            </div>
-
-            <div class="editor-label">
-                @Html.LabelFor(m => m.Sex)
-                @Html.CheckBoxFor(m => m.Mail)
-                @Html.LabelFor(m => m.Mail)
-                @Html.CheckBoxFor(m => m.Femail)
-                @Html.LabelFor(m => m.Femail)
-            </div>
-            <p>
-                <input type="submit" value="חיפוש" />
-            </p>
-        </fieldset>
-    </div>
-}
-else
-{
-    <p>
     .על מנת להגיע למנועי החיפוש יש להתחבר תחילה
-    </p>
-}
+</p>

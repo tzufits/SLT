@@ -65,7 +65,7 @@ namespace MvcApplication4.Controllers
                     }
                     else
                     {
-                        return RedirectToAction("Index", "Home");
+                        return RedirectToAction("Search_trans", "Search");
                     }
                 }
                 else

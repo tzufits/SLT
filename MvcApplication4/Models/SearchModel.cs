@@ -9,7 +9,6 @@ namespace MvcApplication4.Models
 {
     public class SearchModel
     {
-
         [Display(Name = "יום  ")]
         public string Day { get; set; }
 
@@ -21,9 +20,9 @@ namespace MvcApplication4.Models
         public string Sex { get; set; }
 
         [Display(Name = "זכר ")]
-        public bool Mail { get; set; }
-
+        public bool Male { get; set; }
+        
         [Display(Name = "נקבה ")]
-        public bool Femail { get; set; }
+        public bool Female { get; set; }
     }
 }

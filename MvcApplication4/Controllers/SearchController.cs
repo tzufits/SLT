@@ -12,29 +12,39 @@ namespace MvcApplication4.Controllers
 {
     public class SearchController : Controller
     {
-        public ActionResult Search()
+        //
+        // GET: /Search/
+
+        public ActionResult Search_trans()
         {
             return View();
         }
 
         [HttpPost]
 
-        public ActionResult Search(SearchModel model, string returnUrl)
+        public ActionResult Search_trans(SearchModel model, string returnUrl)
         {
-           // if (ModelState.IsValid)
-           // {
-                if(isExists(model))
+            if (ModelState.IsValid)
+            {
+                //  if(isExists(model))
+
+                if (Url.IsLocalUrl(returnUrl) && returnUrl.Length > 1 && returnUrl.StartsWith("/")
+                    && !returnUrl.StartsWith("//") && !returnUrl.StartsWith("/\\"))
                 {
-                    return RedirectToAction("SearchView", "Account");
+                    return Redirect(returnUrl);
                 }
                 else
                 {
-                    return RedirectToAction("About", "Home");
+                    return RedirectToAction("Result", "Result");
                 }
-           // }
+            }
+            else
+            {
+                ModelState.AddModelError("", "");
+            }
 
             // If we got this far, something failed, redisplay form
-           // return View(model);
+            return View(model);
         }
 
         public Boolean isExists(SearchModel model)
@@ -46,12 +56,11 @@ namespace MvcApplication4.Controllers
             string[] lines = System.IO.File.ReadAllLines(filePath);
 
             for (int i = 0; i < lines.Length; i++)
-                if (lines[i] == model.Day && lines[i + 1] == model.City && lines[i+2] == model.Sex)
+                if (lines[i] == model.Day && lines[i + 1] == model.City && lines[i + 2] == model.Sex)
                     return true;
                 else
                     i += 2;
             return false;
         }
-
     }
 }
