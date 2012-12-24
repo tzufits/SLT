@@ -52,15 +52,65 @@ namespace MvcApplication4.Controllers
             //if (!System.IO.File.Exists(@"C:\Users\oener\Documents\users.txt"))
             //    return false;
             string filePath = Server.MapPath(Url.Content("~/Content/trans.txt"));
+             string printFilePath = Server.MapPath(Url.Content("~/Content/toPrint.txt"));
 
-            string[] lines = System.IO.File.ReadAllLines(filePath);
+           // System.IO.StreamWriter file2 = new System.IO.StreamWriter(printFilePath);
 
-            for (int i = 0; i < lines.Length; i++)
-                if (lines[i] == model.Day && lines[i + 1] == model.City && lines[i + 2] == model.Sex)
-                    return true;
-                else
-                    i += 2;
-            return false;
+
+         string[] arrays={model.First, model.Last, model.Day, model.Hour, model.City, model.Sex};// put the searchModel values into an array
+      
+
+    bool flag=true;
+    string[] items;
+    
+    string[] lines= System.IO.File.ReadAllLines(filePath);
+
+        for (int i = 0; i < lines.Length; i++)
+          {
+
+             items= lines[i].Split('#');
+              for(int j=0;j<items.Length-1;j++)
+             {
+
+                  if (items[j]!=null)
+                  {
+                       if (arrays[j]!=items[j])
+                        {
+                            flag=false;
+                             break; 
+                        }
+                 }
+
+            }
+
+
+          if (flag==true)    
+          { 
+              string final= arrays[0]+arrays[1]+arrays[6];
+            // file2.AppendText(final);
+
+               using (StreamWriter sw = System.IO.File.AppendText(printFilePath)) 
+                 {
+                   sw.WriteLine(final);
+               }
+
+           }
+
+        }
+
+ return true;
+}
+
+
+
+           // string[] lines = System.IO.File.ReadAllLines(filePath);
+
+           // for (int i = 0; i < lines.Length; i++)
+            //    if (lines[i] == model.Day && lines[i + 1] == model.City && lines[i + 2] == model.Gender)
+            //        return true;
+           //     else
+           //         i += 2;
+          //  return false;
         }
     }
 }

@@ -9,11 +9,20 @@ namespace MvcApplication4.Models
 {
     public class SearchModel
     {
+        [Display(Name = "שם פרטי ")]
+        public string First { get; set; }
+
+        [Display(Name = "שם משפחה: ")]
+        public string Last { get; set; }
+
+
         [Display(Name = "יום  ")]
         public string Day { get; set; }
 
+        [Display(Name = "שעה ")]
+        public string Hour { get; set; }
 
-        [Display(Name = "עיר  ")]
+        [Display(Name = "אזור ")]
         public string City { get; set; }
 
         [Display(Name = "מין  ")]
