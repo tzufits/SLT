@@ -26,17 +26,19 @@ namespace MvcApplication4.Controllers
         {
             if (ModelState.IsValid)
             {
-                //  if(isExists(model))
-
+                  if(isExists(model))
+                  {
                 if (Url.IsLocalUrl(returnUrl) && returnUrl.Length > 1 && returnUrl.StartsWith("/")
                     && !returnUrl.StartsWith("//") && !returnUrl.StartsWith("/\\"))
                 {
                     return Redirect(returnUrl);
                 }
                 else
-                {
+                { //return RedirectToAction("Index", "printend");
+                    
                     return RedirectToAction("Result", "Result");
                 }
+                  }
             }
             else
             {
@@ -87,7 +89,7 @@ namespace MvcApplication4.Controllers
           if (flag==true)    
           { 
               string final= arrays[0]+arrays[1]+arrays[6];
-            // file2.AppendText(final);
+          
 
                using (StreamWriter sw = System.IO.File.AppendText(printFilePath)) 
                  {
@@ -113,4 +115,4 @@ namespace MvcApplication4.Controllers
           //  return false;
         }
     }
-}
+

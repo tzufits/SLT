@@ -13,7 +13,7 @@ namespace MvcApplication4.Controllers
 
         public ActionResult Result()
         {
-            return View();
+            return View(); 
         }
 
     }
