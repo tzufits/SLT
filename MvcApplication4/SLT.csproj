@@ -99,7 +99,7 @@
   <ItemGroup>
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\printend.cs" />
+    <Compile Include="Controllers\PrintController.cs" />
     <Compile Include="Controllers\ResultController.cs" />
     <Compile Include="Controllers\SearchController.cs" />
     <Compile Include="Global.asax.cs">

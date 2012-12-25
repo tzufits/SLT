@@ -28,16 +28,19 @@ namespace MvcApplication4.Controllers
             {
                   if(isExists(model))
                   {
-                if (Url.IsLocalUrl(returnUrl) && returnUrl.Length > 1 && returnUrl.StartsWith("/")
-                    && !returnUrl.StartsWith("//") && !returnUrl.StartsWith("/\\"))
-                {
-                    return Redirect(returnUrl);
-                }
-                else
-                { //return RedirectToAction("Index", "printend");
-                    
-                    return RedirectToAction("Result", "Result");
-                }
+                      ViewBag.Message = model.Day;
+                      if (model.Day != "sun")
+                          return View();
+
+                        if (Url.IsLocalUrl(returnUrl) && returnUrl.Length > 1 && returnUrl.StartsWith("/")
+                            && !returnUrl.StartsWith("//") && !returnUrl.StartsWith("/\\"))
+                        {
+                            return Redirect(returnUrl);
+                        }
+                        else
+                        { //return RedirectToAction("Index", "printend");
+                            return RedirectToAction("Result", "Result");
+                        }
                   }
             }
             else

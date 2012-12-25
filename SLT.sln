@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcApplication4", "MvcApplication4\MvcApplication4.csproj", "{C675A416-569A-4537-8220-9F6A01ABCF81}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SLT", "MvcApplication4\SLT.csproj", "{C675A416-569A-4537-8220-9F6A01ABCF81}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{358BFAAF-BE3B-4D11-8307-E96A248A02D4}"
 	ProjectSection(SolutionItems) = preProject

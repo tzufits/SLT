@@ -33,5 +33,7 @@ namespace MvcApplication4.Models
         
         [Display(Name = "נקבה ")]
         public bool Female { get; set; }
+
+
     }
 }
