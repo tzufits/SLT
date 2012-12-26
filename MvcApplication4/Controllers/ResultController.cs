@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace MvcApplication4.Controllers
+namespace SLT.Controllers
 {
     public class ResultController : Controller
     {

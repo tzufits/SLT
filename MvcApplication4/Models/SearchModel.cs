@@ -5,7 +5,7 @@ using System.Globalization;
 using System.Web.Mvc;
 using System.Web.Security;
 
-namespace MvcApplication4.Models
+namespace SLT.Models
 {
     public class SearchModel
     {

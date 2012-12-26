@@ -5,10 +5,11 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 using System.Web.Security;
-using MvcApplication4.Models;
+using SLT.Models;
 using System.IO;
 
-namespace MvcApplication4.Controllers
+
+namespace SLT.Controllers
 {
     public class SearchController : Controller
     {
@@ -26,8 +27,8 @@ namespace MvcApplication4.Controllers
         {
             if (ModelState.IsValid)
             {
-                  if(isExists(model))
-                  {
+              //    if(isExists(model))
+              //    {
                    //   ViewBag.Message = model.Day;
                      // if (model.Day != "sun")
                       //    return View();
@@ -41,7 +42,7 @@ namespace MvcApplication4.Controllers
                         { //return RedirectToAction("Index", "printend");
                             return RedirectToAction("Result", "Result");
                         }
-                  }
+               //   }
             }
             else
             {
@@ -65,7 +66,7 @@ namespace MvcApplication4.Controllers
          string[] arrays={model.First, model.Last, model.Day, model.Hour, model.City, model.Sex};// put the searchModel values into an array
       
 
-    bool flag=true;
+    bool flag2=true;
     string[] items;
     
     string[] lines= System.IO.File.ReadAllLines(filePath);
@@ -74,22 +75,22 @@ namespace MvcApplication4.Controllers
           {
 
              items= lines[i].Split('#');
-              for(int j=0;j<items.Length-1;j++)
-             {
+            //  for(int j=0;j<items.Length-1;j++)
+           //  {
 
-                  if (items[j]!=null)
-                  {
-                       if (arrays[j]!=items[j])
-                        {
-                            flag=false;
-                             break; 
-                        }
-                 }
+           //       if (items[j]!=null)
+           //       {
+              //         if (arrays[j]!=items[j])
+            //            {
+             //               flag=false;
+             //                break; 
+             ////           }
+             //    }
 
-            }
+         //   }
 
-
-          if (flag==true)    
+             flag2 = isExists2(items, arrays);
+          if (flag2==true)    
           { 
               string final= arrays[0]+arrays[1]+arrays[6];
           
@@ -106,8 +107,24 @@ namespace MvcApplication4.Controllers
  return true;
 }
 
+        public Boolean isExists2(string[] items, string[] arrays)
+        {
 
+            for (int i = 0; i < 5; i++)
+            {
+                if (items[i] != null)
+                {
+                    if (arrays[i] != items[i])
+                    {
 
+                        return false;
+                    }
+
+                }
+            }
+            return true;
+
+        }
            // string[] lines = System.IO.File.ReadAllLines(filePath);
 
            // for (int i = 0; i < lines.Length; i++)
@@ -117,5 +134,5 @@ namespace MvcApplication4.Controllers
            //         i += 2;
           //  return false;
         }
+    
     }
-

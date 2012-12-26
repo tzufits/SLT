@@ -5,10 +5,10 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 using System.Web.Security;
-using MvcApplication4.Models;
+using SLT.Models;
 using System.IO;
 
-namespace MvcApplication4.Controllers
+namespace SLT.Controllers
 {
     public class AccountController : Controller
     {
