@@ -16,7 +16,7 @@ namespace SLT.Tests
             string[] items3 = { null, null, "levi", "Tel Aviv", null };
 
             Controllers.SearchController a = new Controllers.SearchController();
-            Assert.AreEqual(false, a.isExists2(items3, array1));//false
+            Assert.AreEqual(true, a.isExists2(items3, array1));//false
         }
     }
 }

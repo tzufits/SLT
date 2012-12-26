@@ -29,33 +29,107 @@
             @Html.LabelFor(m => m.Day)
         </div>
         <div class="editor-field">
-             <select id="drpDashboardSpendChart" class="dropdownclass" name="drpSpendChartId" onchange="return DashboardSpendDateChange();">
-                 <option id="0">Choose a date</option>
-                 <option id="1">Last 7 days</option>
-                 <option id="2">Last 1 month</option>
-                 <option id="3">Last 3 months</option>
-             </select>
+        <select>
+              <option>בחר יום</option>
+              <option>ראשון</option>
+              <option>שני</option>
+              <option>שלישי</option>
+              <option>רביעי</option>
+              <option>חמישי</option>
+              <option>שישי</option>
+              <option>שבת</option>
+        </select>
         </div>
 
         <h2>@ViewBag.Message</h2>
 
         <div class="editor-label">    
-            @Html.LabelFor(m => m.Hour)
-            </div>
-
+            @Html.LabelFor(m => m.FromHour)
+        </div>
         <div class="editor-field">
-            @Html.TextBoxFor(m => m.Hour)
+        <select>
+              <option>משעה</option>
+              <option>00:00</option>
+              <option>01:00</option>
+              <option>02:00</option>
+              <option>03:00</option>
+              <option>04:00</option>
+              <option>05:00</option>
+              <option>06:00</option>
+              <option>07:00</option>
+              <option>08:00</option>
+              <option>09:00</option>
+              <option>10:00</option>
+              <option>11:00</option>
+              <option>12:00</option>
+              <option>13:00</option>
+              <option>14:00</option>
+              <option>15:00</option>
+              <option>16:00</option>
+              <option>17:00</option>
+              <option>18:00</option>
+              <option>19:00</option>
+              <option>20:00</option>
+              <option>21:00</option>
+              <option>22:00</option>
+              <option>23:00</option>
+        </select>
+        </div>
+        <div class="editor-label">    
+            @Html.LabelFor(m => m.ToHour)
+        </div>
+        <div class="editor-field">
+        <select>
+              <option>עד שעה</option>
+              <option>00:00</option>
+              <option>01:00</option>
+              <option>02:00</option>
+              <option>03:00</option>
+              <option>04:00</option>
+              <option>05:00</option>
+              <option>06:00</option>
+              <option>07:00</option>
+              <option>08:00</option>
+              <option>09:00</option>
+              <option>10:00</option>
+              <option>11:00</option>
+              <option>12:00</option>
+              <option>13:00</option>
+              <option>14:00</option>
+              <option>15:00</option>
+              <option>16:00</option>
+              <option>17:00</option>
+              <option>18:00</option>
+              <option>19:00</option>
+              <option>20:00</option>
+              <option>21:00</option>
+              <option>22:00</option>
+              <option>23:00</option>
+        </select>
         </div>
         <div class="editor-label">
             @Html.LabelFor(m => m.City)
         </div>
         <div class="editor-field">
-            @Html.TextBoxFor(m => m.City)
+             <select >
+                 <option>בחר אזור</option>
+                 <option>ירושלים והסביבה</option>
+                 <option>מרכז</option>
+                 <option>אילת</option>
+                 <option>צפון</option>
+                 <option>דרום</option>
+                 <option>שפלה</option>
+             </select>
         </div>
-
         <div class="editor-label">
             @Html.LabelFor(m => m.Sex)
-
+        </div>
+        <div class="editor-field">
+        <select>
+            <option>בחר מין</option>
+            <option>זכר</option>
+            <option>נקבה</option>
+        </select>
         </div>
         <p>
             <input type="submit" value="חיפוש" />

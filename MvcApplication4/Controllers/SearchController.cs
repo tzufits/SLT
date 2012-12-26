@@ -63,7 +63,7 @@ namespace SLT.Controllers
            // System.IO.StreamWriter file2 = new System.IO.StreamWriter(printFilePath);
 
 
-         string[] arrays={model.First, model.Last, model.Day, model.Hour, model.City, model.Sex};// put the searchModel values into an array
+         string[] arrays={model.First, model.Last, model.Day, model.FromHour, model.City, model.Sex};// put the searchModel values into an array
       
 
     bool flag2=true;

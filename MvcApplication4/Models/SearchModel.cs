@@ -19,8 +19,11 @@ namespace SLT.Models
         [Display(Name = "יום  ")]
         public string Day { get; set; }
 
-        [Display(Name = "שעה ")]
-        public string Hour { get; set; }
+        [Display(Name = "משעה ")]
+        public string FromHour { get; set; }
+
+        [Display(Name = "עד שעה ")]
+        public string ToHour { get; set; }
 
         [Display(Name = "אזור ")]
         public string City { get; set; }
