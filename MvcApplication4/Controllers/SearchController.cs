@@ -28,9 +28,9 @@ namespace MvcApplication4.Controllers
             {
                   if(isExists(model))
                   {
-                      ViewBag.Message = model.Day;
-                      if (model.Day != "sun")
-                          return View();
+                   //   ViewBag.Message = model.Day;
+                     // if (model.Day != "sun")
+                      //    return View();
 
                         if (Url.IsLocalUrl(returnUrl) && returnUrl.Length > 1 && returnUrl.StartsWith("/")
                             && !returnUrl.StartsWith("//") && !returnUrl.StartsWith("/\\"))
