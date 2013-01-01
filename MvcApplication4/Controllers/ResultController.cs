@@ -16,11 +16,9 @@ namespace SLT.Controllers
          //   string filePath = Server.MapPath(Url.Content("~/Content/trans.txt"));
             string filePath = Server.MapPath(Url.Content("~/Content/toPrint.txt"));
             string[] lines = System.IO.File.ReadAllLines(filePath);
-       //     string[] items;
-        //    int i = 0;
-          //  items = lines[i].Split('#');
+       
             return View(lines); 
-          //  return View(items); 
+          
         }
 
         public ActionResult ResultNotFound()
