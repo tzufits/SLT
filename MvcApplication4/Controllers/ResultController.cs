@@ -13,6 +13,9 @@ namespace SLT.Controllers
 
         public ActionResult Result()
         {
+           // string filePath = Server.MapPath(Url.Content("~/Content/toPrint.txt"));
+           // string[] lines = System.IO.File.ReadAllLines(filePath);
+
             return View(); 
         }
 
