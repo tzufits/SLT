@@ -30,22 +30,20 @@ namespace SLT.Controllers
         {
             if (ModelState.IsValid)
             {
-                if (isExists(model) == true)//my
-                {//**my
-
-
+                if (isExists(model) == true)
+                {
                     if (Url.IsLocalUrl(returnUrl) && returnUrl.Length > 1 && returnUrl.StartsWith("/")
                         && !returnUrl.StartsWith("//") && !returnUrl.StartsWith("/\\"))
                     {
                         return Redirect(returnUrl);
                     }
                     else
-                    { //return RedirectToAction("Index", "printend");
+                    { 
                         return RedirectToAction("Result", "Result");
                     }
-                    //   }
+                   
                 }
-                else//***my
+                else
                 {
                     return RedirectToAction("ResultNotFound", "Result");
                 }
@@ -57,7 +55,6 @@ namespace SLT.Controllers
 
             // If we got this far, something failed, redisplay form
             return View(model);
-
 
         }
 
@@ -84,46 +81,29 @@ namespace SLT.Controllers
             string[] lines = System.IO.File.ReadAllLines(filePath);
 
 
-            StreamWriter sw = new StreamWriter(printFilePath) ;
+            StreamWriter sw = new StreamWriter(printFilePath);
+           // sw.WriteLine("");
+
             for (int i = 0; i < lines.Length; i++)
             {
 
                 items = lines[i].Split('#');
 
-
                 flag2 = isExists2(items, arrays);
+
                 if (flag2 == true)
                 {
                     finder++;
-                  //  string final = items[0] + items[1] + items[6];
-
-                   // using (StreamWriter sw = new StreamWriter(printFilePath))
-                   // {
-                        sw.Write(items[0] + " "+items[1] +" "+ items[6]+"\r\n"+i);
-                   // }
-
-
-
+                 
+                    sw.Write(items[0] + " "+items[1] +" "+ items[6]+"\r\n");
+          
                     flag2 = false;
-
                 }
-                else
-                {
-                 //   using (StreamWriter sw = new StreamWriter(printFilePath))
-                 //   {
-
-                        sw.Write("not found");
-
-                  //  }
-                
-                }
+               
             }
 
-         //   writer.Close();
-      //      fs.Close();
-
-          
-
+          sw.Close();
+     
             if (finder > 0)
                 return true;
             else
