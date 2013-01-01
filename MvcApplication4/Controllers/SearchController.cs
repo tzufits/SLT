@@ -21,37 +21,49 @@ namespace SLT.Controllers
             return View();
         }
 
+
+
+
         [HttpPost]
 
         public ActionResult Search_trans(SearchModel model, string returnUrl)
         {
             if (ModelState.IsValid)
             {
-              //    if(isExists(model))
-              //    {
-                   //   ViewBag.Message = model.Day;
-                     // if (model.Day != "sun")
-                      //    return View();
+                if (isExists(model)==true)//my
+                {//**my
+                    
 
-                        if (Url.IsLocalUrl(returnUrl) && returnUrl.Length > 1 && returnUrl.StartsWith("/")
-                            && !returnUrl.StartsWith("//") && !returnUrl.StartsWith("/\\"))
-                        {
-                            return Redirect(returnUrl);
-                        }
-                        else
-                        { //return RedirectToAction("Index", "printend");
-                            return RedirectToAction("Result", "Result");
-                        }
-               //   }
+                    if (Url.IsLocalUrl(returnUrl) && returnUrl.Length > 1 && returnUrl.StartsWith("/")
+                        && !returnUrl.StartsWith("//") && !returnUrl.StartsWith("/\\"))
+                    {
+                        return Redirect(returnUrl);
+                    }
+                    else
+                    { //return RedirectToAction("Index", "printend");
+                        return RedirectToAction("Result", "Result");
+                    }
+                    //   }
+                }
+                else//***my
+                 {
+                     return RedirectToAction("ResultNotFound", "Result");
+                 }
             }
-            else
-            {
-                ModelState.AddModelError("", "");
-            }
+                else
+                {
+                    ModelState.AddModelError("", "");
+                }
 
-            // If we got this far, something failed, redisplay form
-            return View(model);
+                // If we got this far, something failed, redisplay form
+                return View(model);
+            
+            
         }
+
+
+
+
 
         public Boolean isExists(SearchModel model)
         {
@@ -63,48 +75,43 @@ namespace SLT.Controllers
            // System.IO.StreamWriter file2 = new System.IO.StreamWriter(printFilePath);
 
 
-         string[] arrays={model.First, model.Last, model.Day, model.FromHour, model.City, model.Sex};// put the searchModel values into an array
-      
+   // string[] arrays={model.First, model.Last, model.Day, model.FromHour, model.City, model.Sex};// put the searchModel values into an array
+     //try 
+    string[] arrays={"moran", "moshe", "rison", "13:00", "uro", "male",null};
 
     bool flag2=true;
     string[] items;
-    
+    int finder = 1;
+
     string[] lines= System.IO.File.ReadAllLines(filePath);
 
-        for (int i = 0; i < lines.Length; i++)
+      //  for (int i = 0; i < lines.Length; i++)
+    for (int i = 0; i < 3; i++)
           {
-
-             items= lines[i].Split('#');
-            //  for(int j=0;j<items.Length-1;j++)
-           //  {
-
-           //       if (items[j]!=null)
-           //       {
-              //         if (arrays[j]!=items[j])
-            //            {
-             //               flag=false;
-             //                break; 
-             ////           }
-             //    }
-
-         //   }
-
-             flag2 = isExists2(items, arrays);
-          if (flag2==true)    
-          { 
-              string final= arrays[0]+arrays[1]+arrays[6];
           
+             items= lines[i].Split('#');
+        
+
+           flag2 = isExists2(items, arrays);
+          if (flag2==true)
+          {
+              finder++;
+             // string final= arrays[0]+arrays[1]+arrays[6];
+              string final = "found";  
 
                using (StreamWriter sw = System.IO.File.AppendText(printFilePath)) 
                  {
                    sw.WriteLine(final);
-               }
+                    }
+               flag2 = false;
 
            }
 
         }
-
- return true;
+        if (finder > 0)
+            return true;
+        else
+            return false;
 }
 
         public Boolean isExists2(string[] items, string[] arrays)
@@ -125,14 +132,7 @@ namespace SLT.Controllers
             return true;
 
         }
-           // string[] lines = System.IO.File.ReadAllLines(filePath);
-
-           // for (int i = 0; i < lines.Length; i++)
-            //    if (lines[i] == model.Day && lines[i + 1] == model.City && lines[i + 2] == model.Gender)
-            //        return true;
-           //     else
-           //         i += 2;
-          //  return false;
+           
         }
     
     }

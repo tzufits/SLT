@@ -212,6 +212,7 @@
     <Content Include="Views\Search\Search_trans.cshtml" />
     <Content Include="Views\Result\Result.cshtml" />
     <Content Include="Views\printend\Index.cshtml" />
+    <Content Include="Views\Result\ResultNotFound.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
