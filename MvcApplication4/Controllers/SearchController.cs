@@ -18,6 +18,7 @@ namespace SLT.Controllers
 
         public ActionResult Search_trans()
         {
+            
             return View();
         }
 
@@ -73,7 +74,7 @@ namespace SLT.Controllers
 
 
             string[] arrays = { "moran", "moshe", "rison", "13:00", "uro", "male", null };
-
+           // string[] arrays = { "natali", null, null, null, null, null, null };
             bool flag2 = true;
             string[] items;
             int finder = 0;
