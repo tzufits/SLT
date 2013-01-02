@@ -68,13 +68,20 @@ namespace SLT.Controllers
 
             string filePath = Server.MapPath(Url.Content("~/Content/trans.txt"));
             string printFilePath = Server.MapPath(Url.Content("~/Content/toPrint.txt"));
+            string first;
+            string last;
+            if (model.First == null)
+                first = "null";
+            else
+                first = model.First;
 
-           
-            // string[] arrays={model.First, model.Last, model.Day, model.FromHour, model.City, model.Sex};// put the searchModel values into an array
+            if (model.Last == null)
+                last = "null";
+            else
+                last = model.Last;
 
-
-            string[] arrays = { "moran", "moshe", "rison", "13:00", "uro", "male", null };
-           // string[] arrays = { "natali", null, null, null, null, null, null };
+        string[] arrays={first,last,model.Day,model.City,model.Sex,model.FromHour,model.ToHour,"null"};// put the searchModel values into an array
+         
             bool flag2 = true;
             string[] items;
             int finder = 0;
@@ -83,32 +90,34 @@ namespace SLT.Controllers
 
 
             StreamWriter sw = new StreamWriter(printFilePath);
-           // sw.WriteLine("");
+            
 
             for (int i = 0; i < lines.Length; i++)
             {
-
+                
                 items = lines[i].Split('#');
-
+                
                 flag2 = isExists2(items, arrays);
+              //  sw.Write("flag "+ flag2+"\r\n");
 
                 if (flag2 == true)
                 {
                     finder++;
-                 
-                    sw.Write(items[0] + " "+items[1] +" "+ items[6]+"\r\n");
-          
+
+                    sw.Write(items[0] + " " + items[1] + " " + items[7] + "\r\n");
+
                     flag2 = false;
                 }
                
             }
 
           sw.Close();
-     
-            if (finder > 0)
-                return true;
-            else
-                return false;
+
+          if (finder > 0)
+              return true;
+          else
+              return false;
+          
         }
 
 
@@ -121,15 +130,17 @@ namespace SLT.Controllers
 
             for (int i = 0; i < arrays.Length; i++)
             {
-                if (arrays[i] != null)
-                {
-                    if (arrays[i] != items[i])
+
+                
+                    if (arrays[i] != "null")
                     {
+                        if (arrays[i] != items[i])
+                        {
+                            return false;
+                        }
 
-                        return false;
                     }
-
-                }
+                
             }
             return true;
 

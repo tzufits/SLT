@@ -29,17 +29,19 @@
             @Html.LabelFor(m => m.Day)
         </div>
         <div class="editor-field">
-        <select>
-              <option>בחר יום</option>
-              <option>ראשון</option>
-              <option>שני</option>
-              <option>שלישי</option>
-              <option>רביעי</option>
-              <option>חמישי</option>
-              <option>שישי</option>
-              <option>שבת</option>
+        <select name=Day>
+              <option value=null>בחר יום</option>
+              <option value="ראשון">ראשון</option>
+              <option value ="שני">שני</option>
+              <option value ="שלישי">שלישי</option>
+              <option value ="רביעי">רביעי</option>
+              <option value ="חמישי">חמישי</option>
+              <option value ="שישי">שישי</option>
+              <option value ="שבת">שבת</option>
         </select>
         </div>
+
+
 
         <h2>@ViewBag.Message</h2>
 
@@ -47,88 +49,89 @@
             @Html.LabelFor(m => m.FromHour)
         </div>
         <div class="editor-field">
-        <select>
-              <option>משעה</option>
-              <option>00:00</option>
-              <option>01:00</option>
-              <option>02:00</option>
-              <option>03:00</option>
-              <option>04:00</option>
-              <option>05:00</option>
-              <option>06:00</option>
-              <option>07:00</option>
-              <option>08:00</option>
-              <option>09:00</option>
-              <option>10:00</option>
-              <option>11:00</option>
-              <option>12:00</option>
-              <option>13:00</option>
-              <option>14:00</option>
-              <option>15:00</option>
-              <option>16:00</option>
-              <option>17:00</option>
-              <option>18:00</option>
-              <option>19:00</option>
-              <option>20:00</option>
-              <option>21:00</option>
-              <option>22:00</option>
-              <option>23:00</option>
+        <select name =FromHour>
+             <option value=null>משעה</option>
+              <option value="00">00:00</option>
+              <option value="01">01:00</option>
+              <option value="02">02:00</option>
+              <option value="03">03:00</option>
+              <option value="04">04:00</option>
+              <option value="05">05:00</option>
+              <option value="06">06:00</option>
+              <option value="07">07:00</option>
+              <option value="08">08:00</option>
+              <option value="09">09:00</option>
+              <option value="10">10:00</option>
+              <option value="11">11:00</option>
+              <option value="12">12:00</option>
+              <option value="13">13:00</option>
+              <option value="14">14:00</option>
+              <option value="15">15:00</option>
+              <option value="16">16:00</option>
+              <option value="17">17:00</option>
+              <option value="18">18:00</option>
+              <option value="19">19:00</option>
+              <option value="20">20:00</option>
+              <option value="21">21:00</option>
+              <option value="22">22:00</option>
+              <option value="23">23:00</option>
         </select>
         </div>
+    
         <div class="editor-label">    
             @Html.LabelFor(m => m.ToHour)
         </div>
         <div class="editor-field">
-        <select>
-              <option>עד שעה</option>
-              <option>00:00</option>
-              <option>01:00</option>
-              <option>02:00</option>
-              <option>03:00</option>
-              <option>04:00</option>
-              <option>05:00</option>
-              <option>06:00</option>
-              <option>07:00</option>
-              <option>08:00</option>
-              <option>09:00</option>
-              <option>10:00</option>
-              <option>11:00</option>
-              <option>12:00</option>
-              <option>13:00</option>
-              <option>14:00</option>
-              <option>15:00</option>
-              <option>16:00</option>
-              <option>17:00</option>
-              <option>18:00</option>
-              <option>19:00</option>
-              <option>20:00</option>
-              <option>21:00</option>
-              <option>22:00</option>
-              <option>23:00</option>
+        <select name =ToHour>
+              <option value=null>עד שעה</option>
+              <option value="00">00:00</option>
+              <option value="01">01:00</option>
+              <option value="02">02:00</option>
+              <option value="03">03:00</option>
+              <option value="04">04:00</option>
+              <option value="05">05:00</option>
+              <option value="06">06:00</option>
+              <option value="07">07:00</option>
+              <option value="08">08:00</option>
+              <option value="09">09:00</option>
+              <option value="10">10:00</option>
+              <option value="11">11:00</option>
+              <option value="12">12:00</option>
+              <option value="13">13:00</option>
+              <option value="14">14:00</option>
+              <option value="15">15:00</option>
+              <option value="16">16:00</option>
+              <option value="17">17:00</option>
+              <option value="18">18:00</option>
+              <option value="19">19:00</option>
+              <option value="20">20:00</option>
+              <option value="21">21:00</option>
+              <option value="22">22:00</option>
+              <option value="23">23:00</option>
         </select>
         </div>
         <div class="editor-label">
             @Html.LabelFor(m => m.City)
         </div>
         <div class="editor-field">
-             <select >
-                 <option>בחר אזור</option>
-                 <option>ירושלים והסביבה</option>
-                 <option>מרכז</option>
-                 <option>אילת</option>
-                 <option>צפון</option>
-                 <option>דרום</option>
-                 <option>שפלה</option>
+             <select name=City >
+                 <option value = null >בחר אזור</option>
+                 <option value ="ירושלים">ירושלים והסביבה</option>
+                 <option value ="מרכז">מרכז</option>
+                 <option value ="אילת">אילת</option>
+                 <option value ="צפון">צפון</option>
+                 <option value ="דרום">דרום</option>
+                 <option value ="שפלה">שפלה</option>
              </select>
         </div>
         <div class="editor-label">
             @Html.LabelFor(m => m.Sex)
         </div>
         <div class="editor-field">
-        <select>
-            <option>בחר מין</option>
-            <option>זכר</option>
-            <option>נקבה</option>
+        <select name=Sex>
+            <option value =null > בחר מין</option>
+            <option value ="זכר">זכר</option>
+            <option value ="נקבה">נקבה</option>
         </select>
         </div>
         <p>
