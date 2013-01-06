@@ -98,7 +98,8 @@ namespace SLT.Controllers
                 items = lines[i].Split('#');
                 
                 flag2 = isExists2(items, arrays);
-              //  sw.Write("flag "+ flag2+"\r\n");
+
+
 
                 if (flag2 == true)
                 {
@@ -130,10 +131,14 @@ namespace SLT.Controllers
 
             for (int i = 0; i < arrays.Length; i++)
             {
-
+                    if (hours(items,arrays)==false)
+                        return false;
                 
                     if (arrays[i] != "null")
                     {
+                        if ((i == 5) || (i == 6))
+                            continue;
+
                         if (arrays[i] != items[i])
                         {
                             return false;
@@ -142,8 +147,36 @@ namespace SLT.Controllers
                     }
                 
             }
+  
             return true;
 
+        }
+
+
+
+        public Boolean hours(string[] items, string[] arrays)
+        {
+
+            if ((arrays[5] != "null") && (arrays[6] != "null"))
+            {
+                int num = Convert.ToInt32(items[5], 10);
+                int num2 = Convert.ToInt32(items[6], 10);
+
+                int numarr = Convert.ToInt32(arrays[5], 10);
+                int numarr2 = Convert.ToInt32(arrays[6], 10);
+
+                if (numarr > numarr2)//if to big from from
+                    return false;
+
+
+                if ((numarr >= num) && (numarr <= num2) && (numarr2 >= num) && (numarr2 <= num2))
+                    return true;
+               
+
+            }
+
+            return false;
+      
         }
     }
 }

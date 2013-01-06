@@ -1,2 +1,7 @@
-דוד משה 0580996
+flag=false
+hours=false
+flag=false
+hours=false
+flag=false
+hours=false
 בוב אושר 054444806
