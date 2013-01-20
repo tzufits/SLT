@@ -93,7 +93,7 @@ namespace SLT.Controllers
                 
                 items = lines[i].Split('#');
                 
-                flag2 = compare(items, arrays);
+                flag2 =Compare(items, arrays);
 
 
 
@@ -122,9 +122,8 @@ namespace SLT.Controllers
 
 
 
-        public Boolean compare(string[] items, string[] arrays)
+        public Boolean Compare(string[] items, string[] arrays)
         {
-
             for (int i = 0; i < arrays.Length; i++)
             {
                     if (hours(items,arrays)==false)
