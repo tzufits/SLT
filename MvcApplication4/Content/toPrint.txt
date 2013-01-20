@@ -1,7 +1,4 @@
-flag=false
-hours=false
-flag=false
-hours=false
-flag=false
-hours=false
+נתלי משה 05806
+נטע שילה 0580446
+דוד משה 0580996
 בוב אושר 054444806

@@ -87,16 +87,18 @@ namespace SLT.Controllers
 
 
             StreamWriter sw = new StreamWriter(printFilePath);
-            int i=0;
-            while(i<lines.Length)
+            
+            for( int i=0; i<lines.Length;i++)
             {
                 
                 items = lines[i].Split('#');
-                
-                flag2 =compare(items, arrays);
+
+                flag2 = isExist2(items, arrays);
 
 
+                //  sw.Write(flag2+ "\r\n");
 
+             //   sw.Write(arrays[4]+" "+items[4]+"\r\n");
                 if (flag2 == true)
                 {
                     finder++;
@@ -105,7 +107,7 @@ namespace SLT.Controllers
 
                     flag2 = false;
                 }
-                i++;
+                
                
             }
 
@@ -122,7 +124,7 @@ namespace SLT.Controllers
 
 
 
-        public Boolean compare(string[] items, string[] arrays)
+        public Boolean isExist2(string[] items, string[] arrays)
         {
             for (int i = 0; i < arrays.Length; i++)
             {
@@ -170,7 +172,7 @@ namespace SLT.Controllers
 
             }
 
-            return false;
+            return true;
       
         }
     }
