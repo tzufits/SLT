@@ -60,9 +60,6 @@ namespace SLT.Controllers
         }
 
 
-
-
-
         public Boolean isExists(SearchModel model)
         {
 
