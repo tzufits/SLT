@@ -96,7 +96,7 @@ namespace SLT.Controllers
                 
                 items = lines[i].Split('#');
                 
-                flag2 = isExists2(items, arrays);
+                flag2 = compare(items, arrays);
 
 
 
@@ -126,7 +126,7 @@ namespace SLT.Controllers
 
 
 
-        public Boolean isExists2(string[] items, string[] arrays)
+        public Boolean compare(string[] items, string[] arrays)
         {
 
             for (int i = 0; i < arrays.Length; i++)
