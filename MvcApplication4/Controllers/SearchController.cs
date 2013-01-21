@@ -88,7 +88,7 @@ namespace SLT.Controllers
 
             StreamWriter sw = new StreamWriter(printFilePath);
             int i=0;
-            while(i<lines.Length)
+            while(i < lines.Length)
             {
                 
                 items = lines[i].Split('#');
@@ -105,6 +105,7 @@ namespace SLT.Controllers
 
                     flag2 = false;
                 }
+
                 i++;
                
             }
