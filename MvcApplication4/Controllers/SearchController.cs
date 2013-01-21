@@ -81,7 +81,7 @@ namespace SLT.Controllers
          
             bool flag2 = true;
             string[] items;
-            int finder = 0;
+            int ifExist = 0;
 
             string[] lines = System.IO.File.ReadAllLines(filePath);
 
@@ -99,7 +99,7 @@ namespace SLT.Controllers
 
                 if (flag2 == true)
                 {
-                    finder++;
+                    ifExist++;
 
                     sw.Write(items[0] + " " + items[1] + " " + items[7] + "\r\n");
 
@@ -111,7 +111,7 @@ namespace SLT.Controllers
 
           sw.Close();
 
-          if (finder > 0)
+          if (ifExist > 0)
               return true;
           else
               return false;
