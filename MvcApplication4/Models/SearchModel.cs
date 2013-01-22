@@ -10,10 +10,10 @@ namespace SLT.Models
     public class SearchModel
     {
         [Display(Name = "שם פרטי ")]
-        public string First { get; set; }
+        public string firstName { get; set; }
 
         [Display(Name = "שם משפחה: ")]
-        public string Last { get; set; }
+        public string lastName { get; set; }
 
 
         [Display(Name = "יום  ")]

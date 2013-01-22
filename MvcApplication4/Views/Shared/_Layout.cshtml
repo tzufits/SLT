@@ -10,11 +10,14 @@
     <div class="page">
         <div id="header">
             <div id="title">
-                <h1>SLT</h1>
+                <h1><img src="@Url.Content("~/content/SLT.png")" width="505" height="150"></h1>
             </div>
+            <br /><br /><br />
             <div id="logindisplay">
                 @Html.Partial("_LogOnPartial")
             </div>
+            <br /><br /><br /><br /><br />
+
             <div id="menucontainer">
                 <ul id="menu">
                     @if (Request.CurrentExecutionFilePath != "/Result/Result")
@@ -26,14 +29,17 @@
                        else
                         {
                             <li>@Html.ActionLink("חיפוש", "Search_trans", "Search")</li>
+                            <li>@Html.ActionLink("רשימת מתורגמנים", "Print_list", "Home")</li>
+                            @*<li>@Html.ActionLink("החלף סיסמא", "ChangePassword", "Account")</li>*@
                         }
                         <li>@Html.ActionLink("אודותינו", "About", "Home")</li>
                     }
                     else
                     {
-                        <br />
+                        <li></li>
                     }
                 </ul>
+                
             </div>
             
         </div>

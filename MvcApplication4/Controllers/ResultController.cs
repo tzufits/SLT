@@ -22,9 +22,16 @@ namespace SLT.Controllers
           
         }
 
+        [HttpPost]
+
+        public ActionResult Result(string returnUrl)
+        {
+            return RedirectToAction("Search_trans", "Search");
+        }
+
         public ActionResult ResultNotFound(SearchModel model)//*TRY
         {
-            // string[] arrays={model.First, model.Last, model.Day, model.FromHour, model.City, model.Sex};//
+            // string[] arrays={model.firstName, model.Last, model.Day, model.FromHour, model.City, model.Sex};//
 
             return View(); 
         }

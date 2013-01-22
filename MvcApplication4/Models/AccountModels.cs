@@ -12,18 +12,18 @@ namespace SLT.Models
     {
         [Required]
         [DataType(DataType.Password)]
-        [Display(Name = "Current password")]
+        [Display(Name = "סיסמא נוכחית")]
         public string OldPassword { get; set; }
 
         [Required]
-        [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
+        [StringLength(100, ErrorMessage = ".{0} צריכה להיות בעלת {2} תווים לפחות", MinimumLength = 6)]
         [DataType(DataType.Password)]
-        [Display(Name = "New password")]
+        [Display(Name = "הסיסמא החדשה")]
         public string NewPassword { get; set; }
 
         [DataType(DataType.Password)]
-        [Display(Name = "Confirm new password")]
-        [System.Web.Mvc.Compare("NewPassword", ErrorMessage = "The new password and confirmation password do not match.")]
+        [Display(Name = "אמת סיסמא חדשה")]
+        [System.Web.Mvc.Compare("NewPassword", ErrorMessage = ".אימות הסיסמא אינו תואם")]
         public string ConfirmPassword { get; set; }
     }
 

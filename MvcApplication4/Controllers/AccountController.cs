@@ -53,11 +53,12 @@ namespace SLT.Controllers
 
         public ActionResult LogOn(LogOnModel model, string returnUrl)
         {
+            string name;
             if (ModelState.IsValid)
             {
-                if(isExists(model))
+                if((name = username(model)) != "")
                 {
-                    FormsAuthentication.SetAuthCookie(model.UserName, model.RememberMe);
+                    FormsAuthentication.SetAuthCookie(name, model.RememberMe);
                     if (Url.IsLocalUrl(returnUrl) && returnUrl.Length > 1 && returnUrl.StartsWith("/")
                         && !returnUrl.StartsWith("//") && !returnUrl.StartsWith("/\\"))
                     {
@@ -78,20 +79,22 @@ namespace SLT.Controllers
             return View(model);
         }
 
-        public Boolean isExists(LogOnModel model)
+        public string username(LogOnModel model)
         {
             //if (!System.IO.File.Exists(@"C:\Users\oener\Documents\users.txt"))
             //    return false;
             string filePath = Server.MapPath(Url.Content("~/Content/users.txt"));
-
-            string[] lines = System.IO.File.ReadAllLines(filePath);
+            string[] arr, lines = System.IO.File.ReadAllLines(filePath);
 
             for (int i = 0; i < lines.Length; i++)
-                if (lines[i] == model.UserName && lines[i + 1] == model.Password)
-                    return true;
+            {
+                arr = lines[i].Split('#');
+                if (arr[0] == model.UserName && arr[1] == model.Password)
+                    return arr[2];
                 else
                     i++;
-            return false;
+            }
+            return "";
 
         }
 
@@ -161,16 +164,9 @@ namespace SLT.Controllers
 
                 // ChangePassword will throw an exception rather
                 // than return false in certain failure scenarios.
-                bool changePasswordSucceeded;
-                try
-                {
-                    MembershipUser currentUser = Membership.GetUser(User.Identity.Name, true /* userIsOnline */);
-                    changePasswordSucceeded = currentUser.ChangePassword(model.OldPassword, model.NewPassword);
-                }
-                catch (Exception)
-                {
-                    changePasswordSucceeded = false;
-                }
+                bool changePasswordSucceeded = false;
+                
+
 
                 if (changePasswordSucceeded)
                 {
@@ -178,7 +174,7 @@ namespace SLT.Controllers
                 }
                 else
                 {
-                    ModelState.AddModelError("", "The current password is incorrect or the new password is invalid.");
+                    ModelState.AddModelError("", "");
                 }
             }
 

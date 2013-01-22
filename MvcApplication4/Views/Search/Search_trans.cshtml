@@ -11,19 +11,19 @@
 <p>
     הכנס ערכים לחיפוש
 </p>
-    
+    @Html.ValidationSummary(true,".שדה השעה אינו חוקי")
     <div>
         <div class="editor-label">    
-            @Html.LabelFor(m => m.First)
+            @Html.LabelFor(m => m.firstName)
         </div>
         <div class="editor-field">
-            @Html.TextBoxFor(m => m.First)
+            @Html.TextBoxFor(m => m.firstName)
         </div>
         <div class="editor-label">
-            @Html.LabelFor(m => m.Last)
+            @Html.LabelFor(m => m.lastName)
         </div>
         <div class="editor-field">
-            @Html.TextBoxFor(m => m.Last)
+            @Html.TextBoxFor(m => m.lastName)
         </div>
         <div class="editor-label">    
             @Html.LabelFor(m => m.Day)
@@ -40,10 +40,6 @@
               <option value ="שבת">שבת</option>
         </select>
         </div>
-
-
-
-        <h2>@ViewBag.Message</h2>
 
         <div class="editor-label">    
             @Html.LabelFor(m => m.FromHour)
