@@ -137,7 +137,7 @@ namespace SLT.Controllers
                 flag = 1;
                 return false;
             }
-            if ((numarr >= num) && (numarr <= num2) && (numarr2 >= num) && (numarr2 <= num2))
+            if ((numarr <= num) && (numarr2 >= num2))
                 return true;
             return false;
         }

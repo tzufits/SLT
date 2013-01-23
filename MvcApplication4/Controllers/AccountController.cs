@@ -91,8 +91,6 @@ namespace SLT.Controllers
                 arr = lines[i].Split('#');
                 if (arr[0] == model.UserName && arr[1] == model.Password)
                     return arr[2];
-                else
-                    i++;
             }
             return "";
 
